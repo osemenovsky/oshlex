@@ -5,7 +5,7 @@ from oshlex import handlers
 
 # Defining rules
 root = Rule('root')
-server = Rule('server')
+server = Rule('server', unique=True, mandatory=True)
 host = Rule('host', handler=handlers.text, unique=True, mandatory=True)
 port = Rule('port', handler=handlers.integer, unique=True, mandatory=True)
 user = Rule('user', unique=False, mandatory=False)
@@ -22,5 +22,3 @@ root.add(server)
 
 conf = Configuration(root, './example.conf')
 conf.read()
-
-print(conf)
