@@ -13,6 +13,17 @@ tokens into python data structures.
 **Warning**: At this moment only python >3.4 is supported, python2.7
 support is planned in the near future.
 
+Installation
+~~~~~~~~~~~~
+You can install this package from pypi using pip.
+Given that the python 2.7 isn't supported (yet), you can do it as 
+follows:
+
+::
+
+    pip3.4 install oshlex
+
+
 Configuration syntax
 ~~~~~~~~~~~~~~~~~~~~
 
