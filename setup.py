@@ -17,10 +17,36 @@
 import os
 from setuptools import setup
 
+with open(os.path.join(os.path.dirname(__file__),
+'README.md')) as readme:
+    README = readme.read()
+
 setup(
     name='oshlex',
-    version='0.0.1a',
+    version='0.0.1.1',
     packages=['oshlex'],
+    license='GNU GPLv2',
+    description='Rule based unix-style config parser written with shlex',
+    url='https://github.com/osemenovsky/oshlex',
     author='Oleg Semenovsky',
     author_email='o.semenovsky@gmail.com',
+    maintainer='Oleg Semenovsky',
+    maintainer_email='o.semenovsky@gmail.com',
+    long_description=README,
+    classifiers = [
+        'Development Status :: 2 - Pre-Alpha',
+        'Environment :: Plugins',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+        'Natural Language :: English',
+        'Operating System :: POSIX',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Topic :: Software Development',
+        'Topic :: Software Development :: Libraries',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ]
 )
