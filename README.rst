@@ -142,7 +142,7 @@ to convert these ranges into lists of integers, so we write a handler:
     from oshlex.handlers import UnacceptableToken, UnacceptableTokenCount
     def range(tokens):
         if len(tokens) > 1:
-            raise UnacceptableTokenCount("This handler accepts 1 token at most")
+            raise UnacceptableTokenCount('This handler accepts 1 token at most')
 
         try:
             start, end = [int(token) for token in tokens[0].split('-')]
