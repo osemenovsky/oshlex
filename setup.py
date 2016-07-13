@@ -25,7 +25,7 @@ setup(
     name='oshlex',
     version='0.0.1.1',
     packages=['oshlex'],
-    license='GNU GPLv2',
+    license='GNU General Public License v2 (GPLv2)',
     description='Rule based unix-style config parser written with shlex',
     url='https://github.com/osemenovsky/oshlex',
     author='Oleg Semenovsky',
