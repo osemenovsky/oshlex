@@ -68,7 +68,7 @@ conf = Configuration(root, './example.conf')
 conf.read()
 ```
 
-This way we get the Configuration object (conf) following structure:
+This way we get the Configuration object (conf) with following structure:
 ```python
 {
   'server': {
