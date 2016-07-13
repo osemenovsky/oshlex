@@ -10,6 +10,9 @@ library, that provides an easy way to parse configuration files, by
 creating a set of rules and handlers, which are then used to transform
 tokens into python data structures.
 
+**Warning**: At this moment only python >3.4 is supported, python2.7
+support is planned in the near future.
+
 Configuration syntax
 ~~~~~~~~~~~~~~~~~~~~
 
