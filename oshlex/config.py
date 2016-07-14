@@ -105,6 +105,10 @@ class Configuration():
         self.tokenizer = self._tokenizer(open(path, 'r'), infile=path)
         self._config = self._parse()
 
+    def validate(self, path):
+        self.tokenizer = self._tokenizer(open(path, 'r'), infile=path)
+        self._parse()
+
     def __str__(self):
         return str(self._config)
 
