@@ -91,8 +91,7 @@ class Tokenizer(shlex.shlex):
 
 
 class Configuration():
-    def __init__(self, root, path, tokenizer=None):
-        self._path = path
+    def __init__(self, root, tokenizer=None):
         self._root = root
         if not tokenizer:
             self._tokenizer = Tokenizer
@@ -102,8 +101,8 @@ class Configuration():
         self.tokenizer = None
         self._config = {}
 
-    def read(self):
-        self.tokenizer = self._tokenizer(open(self._path, 'r'), infile=self._path)
+    def read(self, path):
+        self.tokenizer = self._tokenizer(open(path, 'r'), infile=path)
         self._config = self._parse()
 
     def __str__(self):
