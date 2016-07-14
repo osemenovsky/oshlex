@@ -119,8 +119,8 @@ Basic example
     server.add(user)
     root.add(server)
 
-    conf = Configuration(root, './example.conf')
-    conf.read()
+    conf = Configuration(root)
+    conf.read('./example.conf')
 
 This way we get the Configuration object (conf) with following
 structure:
