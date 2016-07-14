@@ -23,7 +23,7 @@ with open(os.path.join(os.path.dirname(__file__),
 
 setup(
     name='oshlex',
-    version='0.0.1.2',
+    version='0.0.1.3',
     packages=['oshlex'],
     license='GNU General Public License v2 (GPLv2)',
     description='Rule based unix-style config parser written with shlex',
