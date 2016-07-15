@@ -51,14 +51,22 @@ class Rule():
         self.mandatory = mandatory
         self.subrules = {}
 
+    def __repr__(self):
+        r = 'oshlex rule {}, unique: {}, mandatory: {}'.format(self.name, self.unique, self.mandatory)
+        if self.subrules:
+            r += '\n'
+            r += repr(self.subrules)
+        return r
     def __getitem__(self, key):
         return self.__dict__[key]
 
     def get(self, name):
         return self.subrules[name]
 
-    def add(self, rule):
-        self.subrules[rule.name] = rule
+    def add(self, *rules):
+        for rule in rules:
+            self.subrules[rule.name] = rule
+        return self
 
     def in_context(self, name):
         if name in self.subrules:
